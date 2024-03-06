@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+
+:root {
+  --font-base: "DM Sans", sans-serif;
+  --primary-color: #edf2f8;
+  --secondary-color: #313bac;
+  --black-color: #030303;
+  --lightGray-color: #e4e4e4;
+  --gray-color: #6b7688;
+  --brown-color: #46364a;
+  --white-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+.container {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto auto auto auto auto auto;
+    max-width: 1550px;
+    margin: 0 auto;
+}
+       
+body{
+    background-color: var(--primary-color);
+    font-family: var(--font-base);
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('./image/backgroung1.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;  
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav p{
+    color: #0493ec;
+    font-size: 20px;
+
+}
+
+nav img{
+    width: 150px;
+
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color:#0493ec;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after{
+    content:'';
+    width:0;
+    height: 2px;
+    background:#b8f436 ;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.text-box{
+    width: 90%;
+    color: #0493ec;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 62px;
+}
+
+nav .fa{
+    display: none;
+} 
+
+@media(max-width: 700px){
+
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: fixed;
+        background:#b8f436 ;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+
+.about-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.row1{
+    display: flex;
+    margin-top: 25px;
+    justify-content: space-between;
+}
+
+.box{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.box img{
+    width: 100%;   
+}
+
+.center{
+    text-align: center;
+}
+
+@media(max-width:700px){
+  
+    .row1{
+        flex-direction: column !important;
+    }
+    .row11{
+        flex-direction: column;
+    }
+}
+
+.main-heading {
+    
+    background: var(--brown-color);
+    color: var(--white-color);
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+ 
+.icon {
+    margin-left: 40%;
+}
+
+.heading {
+    font-size: 40px;
+    margin-left: 10px;
+}
+
+.icon-size {
+    font-size: 30px;
+}
+
+#footer {
+    height: 80px;
+}
+
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color:rosybrown;
+    color:black;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    background: var(--brown-color);
+    background-position: center;
+    background-size: cover;
+   border-radius: 10px;
+   text-align: center;
+   padding: 100px 0;
+}
+
+.cta h1{
+    color: #fff;
+    margin-bottom:20px;
+    padding: 0;
+}
+
+.cta p{
+    color: antiquewhite;
+    margin-bottom:20px;
+    padding: 0;
+}
+
+@media(max-width:700px){
+    .cta h1{
+        font-size: 24px;
+    }
+}
+
+.campus
+{
+   
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.campus-row{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin:30px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.campus-row img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    height: 100%;
+}
+
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover{
+    background: var(--gray-color);
+    opacity: 0.5;
+}
+
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: white;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+.row
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.facilites{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.facilities-col{
+    flex-basis: 30%;
+    border-radius: 10px;
+    margin: 2%;
+    padding: 2%;
+    text-align: left;
+    border-radius: 2%;
+    background-color: white !important;
+}
+
+.facilites-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.facilites-col p{
+    padding: 0;
+}
+
+.facilites-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.leftcolumn {
+    float: left;
+    width: 100%;
+}
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+  
+    
+@media screen and (max-width: 500px) {
+    #container {
+        height: auto;
+        display: grid;
+        width: 100%;
+        grid-auto-rows: 0.09fr 0.2fr 0.2fr 0.2fr 1fr 0.2fr 0.2fr;
+    }
+
+    .nav_links {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+    }
+    .nav_links li{
+        width: 100%;
+        margin: 10px;
+    }
+}
